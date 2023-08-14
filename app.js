@@ -6,8 +6,8 @@ const port = process.env.PORT || 5000;
 
 const getId = (address) => {
     const number = parseInt(address, 16);
-    const quotient = Math.floor(number / 1240);
-    return quotient;
+    const remainder = number % 1240;
+    return remainder;
   };
 
 app.get('/id/:address', (req, res) => {
